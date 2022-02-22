@@ -13,17 +13,17 @@
 #define __vo volatile
 
 
-#define FLASH_PROGRAM_MEMORY_BASEADDR	0x0800 0000U		/* flash memory is up to 192 Kbyts*/
-#define SRAM 							0X2000 2000U		/* STM32L0x3 devices feature up to 20 Kbytes of static SRAM.*/
-#define ROM								0x1FF0 0000U		/* ROM is 8 Kbyts*/
+#define FLASH_PROGRAM_MEMORY_BASEADDR	0x08000000U		/* flash memory is up to 192 Kbyts*/
+#define SRAM 							0X20002000U		/* STM32L0x3 devices feature up to 20 Kbytes of static SRAM.*/
+#define ROM								0x1FF00000U		/* ROM is 8 Kbyts*/
 
 
 
-#define PERIPH_BASE						0x4000 0000U
-#define AHBPERIPH_BASE					0x4002 0000U
-#define APB1PERIPH_BASE					0x4000 0000U
-#define APB2PERIPH_BASE					0x4001 0000U
-#define IOPORTPERIPH_BASE				0x5000 0000U
+#define PERIPH_BASE						0x40000000U
+#define AHBPERIPH_BASE					0x40020000U
+#define APB1PERIPH_BASE					0x40000000U
+#define APB2PERIPH_BASE					0x40010000U
+#define IOPORTPERIPH_BASE				0x50000000U
 
 
 /*  Base address of peripherals which are hanging on AHB bus  */
@@ -150,6 +150,24 @@ typedef struct
 #define RCC			((RCC_RegDef_t*)  RCC_BASEADDR)
 
 
+
+
+/*
+ * Some Generic Macros
+ */
+
+#define ENABLE				1
+#define DISABLE				0
+#define SET					ENABLE
+#define RESET				DISABLE
+#define GPIO_PIN_SET		SET
+#define GPIO_PIN_RESET		RESET
+
+
+
+
+
+
 /*
  * clock enable macro for GPIOx peripheral
  */
@@ -204,8 +222,55 @@ typedef struct
 
 
 
+/*
+ * clock Disable macro for GPIOx peripheral
+ */
+
+#define GPIOA_PCLK_DI()			(RCC -> IOPENR &= ~(1 << 0))
+#define GPIOB_PCLK_DI()			(RCC -> IOPENR &= ~(1 << 1))
+#define GPIOC_PCLK_DI()			(RCC -> IOPENR &= ~(1 << 2))
+#define GPIOD_PCLK_DI()			(RCC -> IOPENR &= ~(1 << 3))
+#define GPIOE_PCLK_DI()			(RCC -> IOPENR &= ~(1 << 4))
+#define GPIOH_PCLK_DI()			(RCC -> IOPENR &= ~(1 << 7))
 
 
+
+/*
+ * clock Disable macro for I2Cx peripheral
+ */
+
+
+#define I2C1_PCLK_DI() 			(RCC -> APB1ENR &= ~ 1<< 21))
+#define I2C2_PCLK_DI() 			(RCC -> APB1ENR &= ~(1<< 22))
+#define I2C3_PCLK_DI() 			(RCC -> APB1ENR &= ~(1<< 30))
+
+
+
+/*
+ * clock Disable macro for SPIx peripheral
+ */
+
+#define SPI1_PCLK_DI()			(RCC -> APB2ENR &= ~(1 << 12))
+#define SPI2_PCLK_DI()			(RCC -> APB1ENR &= ~(1 << 14))
+
+
+/*
+ * clock Disable macro for USARTx peripheral
+ */
+
+#define USART1_PCLK_DI()		(RCC -> APB2ENR &= ~(1 << 14))
+#define USART2_PCLK_DI()		(RCC -> APB1ENR &= ~(1 << 17))
+#define USART4_PCLK_DI()		(RCC -> APB1ENR &= ~(1 << 19))
+#define USART5_PCLK_DI()		(RCC -> APB1ENR &= ~(1 << 20))
+#define LPUART1_PCLK_DI()		(RCC -> APB1ENR &= ~(1 << 18))
+
+
+
+/*
+ * clock Disable macro for SYSCFG peripheral
+ */
+
+#define SYSCFG_PCLK_DI()		(RCC -> APB2ENR &= ~(1 << 0))
 
 
 

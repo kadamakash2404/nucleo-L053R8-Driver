@@ -439,3 +439,11 @@
 2022-02-21 12:14:37,990 [ERROR] ConfigurationRetriever:139 - IOException on connection: sw-center.st.com
 2022-02-21 12:14:37,993 [ERROR] ConfigurationRetriever:139 - IOException on connection: sw-center.st.com
 2022-02-21 12:14:37,995 [ERROR] ConfigurationRetriever:139 - IOException on connection: sw-center.st.com
+2022-02-22 11:23:44,320 [INFO] Activator:177 - 
+
+
+2022-02-22 11:23:44,321 [INFO] Activator:178 - !SESSION log4j initialized
+2022-02-22 11:23:45,077 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2022-02-22 11:23:45,079 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2022-02-22 11:23:45,090 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Could not load icon "icons/chip.png".
+2022-02-22 11:23:51,299 [ERROR] AnalyticsContext:980 - The ST intranet updater server is unknown: mcucrossselector.codex.cro.st.com
