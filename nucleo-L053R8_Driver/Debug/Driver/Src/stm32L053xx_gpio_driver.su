@@ -1,0 +1,10 @@
+stm32L053xx_gpio_driver.c:30:6:GPIO_PeriClkControl	16	static
+stm32L053xx_gpio_driver.c:106:6:GPIO_Init	24	static
+stm32L053xx_gpio_driver.c:169:6:GPIO_DeInit	16	static
+stm32L053xx_gpio_driver.c:205:9:GPIO_ReadFromInputPin	16	static
+stm32L053xx_gpio_driver.c:229:10:GPIO_ReadFromInputPort	16	static
+stm32L053xx_gpio_driver.c:253:6:GPIO_WriteToOutputPin	16	static
+stm32L053xx_gpio_driver.c:276:6:GPIO_WriteToOutputPort	16	static
+stm32L053xx_gpio_driver.c:299:6:Gpio_ToggleOutputPin	16	static
+stm32L053xx_gpio_driver.c:331:6:GPIO_IRQConfig	24	static
+stm32L053xx_gpio_driver.c:356:6:GPIO_IRQHandling	16	static

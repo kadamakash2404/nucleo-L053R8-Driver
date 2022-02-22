@@ -1,0 +1,68 @@
+/*
+ * STM32L053xx.h
+ *
+ *  Created on: Feb 21, 2022
+ *      Author: kadam
+ */
+
+#ifndef INC_STM32L053XX_H_
+#define INC_STM32L053XX_H_
+
+
+
+
+#define FLASH_BASEADDR					0x0800 0000U		/* flash memory is up to 192 Kbyts*/
+#define SRAM 							0X2000 2000U		/* STM32L0x3 devices feature up to 20 Kbytes of static SRAM.*/
+#define ROM								0x1FF0 0000U		/* ROM is 8 Kbyts*/
+
+
+
+#define PERIPH_BASE						0x4000 0000U
+#define AHBPERIPH_BASE					0x4002 0000U
+#define APB1PERIPH_BASE					0x4000 0000U
+#define APB2PERIPH_BASE					0x4001 0000U
+#define IOPORTPERIPH_BASE				0x5000 0000U
+
+
+/* Base address of peripherals which are hanging on AHB bus*/
+
+#define DMA1_BASEADDR					0X4002 0000U
+#define	RCC_BASEADDR					0X4002 1000U
+#define FLASH_BASEADDR					0X4002 2000U
+#define CRC_BASEADDR					0X4002 3000U
+#define TSC_BASEADDR					0X4002 4000U
+#define RNG_BASEADDR					0X4002 5000U
+#define AES_BASEADDR					0X4002 6000U
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif /* INC_STM32L053XX_H_ */
