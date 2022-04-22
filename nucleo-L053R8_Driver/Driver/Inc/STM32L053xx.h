@@ -239,7 +239,7 @@ typedef struct
  */
 
 
-#define I2C1_PCLK_DI() 			(RCC -> APB1ENR &= ~ 1<< 21))
+#define I2C1_PCLK_DI() 			(RCC -> APB1ENR &= ~(1<< 21))
 #define I2C2_PCLK_DI() 			(RCC -> APB1ENR &= ~(1<< 22))
 #define I2C3_PCLK_DI() 			(RCC -> APB1ENR &= ~(1<< 30))
 
